@@ -96,18 +96,17 @@
 
 
 
-  <meta name="description" content="Hexo是一个轻量级的博客框架，也支持markdown（当然是有限制的）。">
-<meta name="keywords" content="nodejs">
+  <meta name="description" content="Docker是当下最火热的SaaS技术之一，其本质是容器（container）技术的封装。容器是与系统其他部分隔离开的一系列进程。运行这些进程所需的所有文件都由另一个镜像提供，这意味着从开发到测试再到生产的整个过程中，Linux 容器都具有可移植性和一致性。 容器技术有以下几大好处  “环境配置”的优雅解决方案，终端用户不再需要vmware这样的重量级虚拟机来搭建应用，不必为了应用开发先得学会如何">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo博客建站笔记">
-<meta property="og:url" content="https://ckpwinters.github.io/2019/05/26/Hexo博客建站笔记/index.html">
+<meta property="og:title" content="Docker入门:容器、镜像和仓库">
+<meta property="og:url" content="https://ckpwinters.github.io/2019/05/28/Docker入门-仓库、镜像和容器/index.html">
 <meta property="og:site_name" content="Ank Winters&#39; IT Blog">
-<meta property="og:description" content="Hexo是一个轻量级的博客框架，也支持markdown（当然是有限制的）。">
+<meta property="og:description" content="Docker是当下最火热的SaaS技术之一，其本质是容器（container）技术的封装。容器是与系统其他部分隔离开的一系列进程。运行这些进程所需的所有文件都由另一个镜像提供，这意味着从开发到测试再到生产的整个过程中，Linux 容器都具有可移植性和一致性。 容器技术有以下几大好处  “环境配置”的优雅解决方案，终端用户不再需要vmware这样的重量级虚拟机来搭建应用，不必为了应用开发先得学会如何">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-05-26T09:33:17.169Z">
+<meta property="og:updated_time" content="2019-05-27T16:14:53.449Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo博客建站笔记">
-<meta name="twitter:description" content="Hexo是一个轻量级的博客框架，也支持markdown（当然是有限制的）。">
+<meta name="twitter:title" content="Docker入门:容器、镜像和仓库">
+<meta name="twitter:description" content="Docker是当下最火热的SaaS技术之一，其本质是容器（container）技术的封装。容器是与系统其他部分隔离开的一系列进程。运行这些进程所需的所有文件都由另一个镜像提供，这意味着从开发到测试再到生产的整个过程中，Linux 容器都具有可移植性和一致性。 容器技术有以下几大好处  “环境配置”的优雅解决方案，终端用户不再需要vmware这样的重量级虚拟机来搭建应用，不必为了应用开发先得学会如何">
 
 
 
@@ -115,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="https://ckpwinters.github.io/2019/05/26/Hexo博客建站笔记/">
+  <link rel="canonical" href="https://ckpwinters.github.io/2019/05/28/Docker入门-仓库、镜像和容器/">
 
 
 
@@ -125,7 +124,7 @@
   };
 </script>
 
-  <title>Hexo博客建站笔记 | Ank Winters' IT Blog</title>
+  <title>Docker入门:容器、镜像和仓库 | Ank Winters' IT Blog</title>
   
 
 
@@ -290,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ckpwinters.github.io/2019/05/26/Hexo博客建站笔记/">
+    <link itemprop="mainEntityOfPage" href="https://ckpwinters.github.io/2019/05/28/Docker入门-仓库、镜像和容器/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ank Winters">
@@ -307,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo博客建站笔记
+          <h1 class="post-title" itemprop="name headline">Docker入门:容器、镜像和仓库
 
               
             
@@ -333,7 +332,7 @@
                 
               
 
-              <time title="Created: 2019-05-26 17:31:24 / Modified: 17:33:17" itemprop="dateCreated datePublished" datetime="2019-05-26T17:31:24+08:00">2019-05-26</time>
+              <time title="Created: 2019-05-28 00:12:56 / Modified: 00:14:53" itemprop="dateCreated datePublished" datetime="2019-05-28T00:12:56+08:00">2019-05-28</time>
             
 
             
@@ -372,7 +371,19 @@
       
 
       
-        <p>Hexo是一个轻量级的博客框架，也支持markdown（当然是有限制的）。</p>
+        <p>Docker是当下最火热的SaaS技术之一，其本质是容器（container）技术的封装。容器是与系统其他部分隔离开的<strong>一系列进程</strong>。运行这些进程所需的所有文件都由另一个<strong>镜像</strong>提供，这意味着从开发到测试再到生产的整个过程中，Linux 容器都具有可移植性和一致性。</p>
+<p>容器技术有以下几大好处</p>
+<ol>
+<li>“环境配置”的优雅解决方案，终端用户不再需要vmware这样的重量级虚拟机来搭建应用，不必为了应用开发先得学会如何安装、配置整个操作系统，能将更多精力放在解决应用问题本身上。</li>
+<li>弹性的云服务。Docker 容器可以随开随关，可以动态扩容和缩容，实现了云计算中“虚拟化”。</li>
+<li>微服务管理。一台机器可以跑多个Docker容器，因此在本机就可以模拟出微服务架构。除此之外，可以通过k8s实现docker集群管理，轻而易举地实现大规模服务管理。</li>
+</ol>
+<h2 id="Docker-image"><a href="#Docker-image" class="headerlink" title="Docker image"></a>Docker image</h2><p>先来看docker image的官方定义</p>
+<blockquote>
+<p>A Docker image is a file, comprised of multiple layers, used to execute code in a Docker container. An image is essentially built from the instructions for a complete and executable version of an application, which relies on the host OS kernel.</p>
+</blockquote>
+<p>翻译一下，镜像是用来生产容器的一种特殊文件，是一个应用运行环境的最小系统。比如要跑一个nginx服务，传统方法是在一台物理机上安装Linux发行版如Ubuntu，然后用apt安装nginx，接着用vim编辑配置文件，最后用systemd或init脚本启动nginx。在这过程中，vim、apt这类工具完全是冗余的。删去这些冗余信息后的最小系统便可以打包成一个镜像文件。</p>
+<h2 id="Docker-Hub"><a href="#Docker-Hub" class="headerlink" title="Docker Hub"></a>Docker Hub</h2><p>Docker Hub是存放各类docker镜像(image)的仓库，类似Linux软件的镜像源</p>
 
       
     </div>
@@ -394,12 +405,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/nodejs/" rel="tag"># nodejs</a>
-          
-        </div>
-      
 
       
       
@@ -409,15 +414,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/05/26/Hexo博客建站笔记/" rel="next" title="Hexo博客建站笔记">
+                <i class="fa fa-chevron-left"></i> Hexo博客建站笔记
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/28/Docker入门-仓库、镜像和容器/" rel="prev" title="Docker入门:容器、镜像和仓库">
-                Docker入门:容器、镜像和仓库 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -461,8 +466,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -521,6 +535,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-image"><span class="nav-number">1.</span> <span class="nav-text">Docker image</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-Hub"><span class="nav-number">2.</span> <span class="nav-text">Docker Hub</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
