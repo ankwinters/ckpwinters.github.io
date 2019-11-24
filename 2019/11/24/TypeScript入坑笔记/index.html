@@ -96,17 +96,17 @@
 
 
 
-  <meta name="description" content="简介因为做项目研究 WebGL 相关的内容，因此想把前端语言好好整一下。因此直接上手了 TypeScript，不知道是不是正确的。。比较我之前也就写过几百行 JS 代码，基本属于管中窥豹。 TypeScript 类型数据类型TS 常用的数据类型可以分成三类：  基本类型（和 JS 保持一致）：Boolean, Number, String, Null, Undefined, Object； 结构体">
+  <meta name="description" content="简介因为做项目研究 WebGL 相关的内容，因此想把前端语言好好整一下，直接上手了 TypeScript。不知道这样做是不是正确的，反正还是得试探一下。之前也就写过几百行 JS 代码，从来没管过ES3,ES6各种 JS 标准，基本属于管中窥豹。 TypeScript 类型数据类型TS 常用的数据类型可以分成三类：  基本类型（和 JS 保持一致）：Boolean, Number, String,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TypeScript入坑笔记">
 <meta property="og:url" content="https://ckpwinters.github.io/2019/11/24/TypeScript入坑笔记/index.html">
 <meta property="og:site_name" content="Ank Winters&#39; IT Blog">
-<meta property="og:description" content="简介因为做项目研究 WebGL 相关的内容，因此想把前端语言好好整一下。因此直接上手了 TypeScript，不知道是不是正确的。。比较我之前也就写过几百行 JS 代码，基本属于管中窥豹。 TypeScript 类型数据类型TS 常用的数据类型可以分成三类：  基本类型（和 JS 保持一致）：Boolean, Number, String, Null, Undefined, Object； 结构体">
+<meta property="og:description" content="简介因为做项目研究 WebGL 相关的内容，因此想把前端语言好好整一下，直接上手了 TypeScript。不知道这样做是不是正确的，反正还是得试探一下。之前也就写过几百行 JS 代码，从来没管过ES3,ES6各种 JS 标准，基本属于管中窥豹。 TypeScript 类型数据类型TS 常用的数据类型可以分成三类：  基本类型（和 JS 保持一致）：Boolean, Number, String,">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-11-24T04:49:43.638Z">
+<meta property="og:updated_time" content="2019-11-24T05:42:42.988Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TypeScript入坑笔记">
-<meta name="twitter:description" content="简介因为做项目研究 WebGL 相关的内容，因此想把前端语言好好整一下。因此直接上手了 TypeScript，不知道是不是正确的。。比较我之前也就写过几百行 JS 代码，基本属于管中窥豹。 TypeScript 类型数据类型TS 常用的数据类型可以分成三类：  基本类型（和 JS 保持一致）：Boolean, Number, String, Null, Undefined, Object； 结构体">
+<meta name="twitter:description" content="简介因为做项目研究 WebGL 相关的内容，因此想把前端语言好好整一下，直接上手了 TypeScript。不知道这样做是不是正确的，反正还是得试探一下。之前也就写过几百行 JS 代码，从来没管过ES3,ES6各种 JS 标准，基本属于管中窥豹。 TypeScript 类型数据类型TS 常用的数据类型可以分成三类：  基本类型（和 JS 保持一致）：Boolean, Number, String,">
 
 
 
@@ -332,7 +332,7 @@
                 
               
 
-              <time title="Created: 2019-11-24 12:20:45 / Modified: 12:49:43" itemprop="dateCreated datePublished" datetime="2019-11-24T12:20:45+08:00">2019-11-24</time>
+              <time title="Created: 2019-11-24 12:20:45 / Modified: 13:42:42" itemprop="dateCreated datePublished" datetime="2019-11-24T12:20:45+08:00">2019-11-24</time>
             
 
             
@@ -371,7 +371,7 @@
       
 
       
-        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>因为做项目研究 WebGL 相关的内容，因此想把前端语言好好整一下。因此直接上手了 TypeScript，不知道是不是正确的。。比较我之前也就写过几百行 JS 代码，基本属于管中窥豹。</p>
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>因为做项目研究 WebGL 相关的内容，因此想把前端语言好好整一下，直接上手了 TypeScript。不知道这样做是不是正确的，反正还是得试探一下。之前也就写过几百行 JS 代码，从来没管过<code>ES3</code>,<code>ES6</code>各种 JS 标准，基本属于管中窥豹。</p>
 <h2 id="TypeScript-类型"><a href="#TypeScript-类型" class="headerlink" title="TypeScript 类型"></a>TypeScript 类型</h2><h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>TS 常用的数据类型可以分成三类：</p>
 <ol>
 <li>基本类型（和 JS 保持一致）：<code>Boolean</code>, <code>Number</code>, <code>String</code>, <code>Null</code>, <code>Undefined</code>, <code>Object</code>；</li>
@@ -379,27 +379,41 @@
 <li>特殊类型：<code>Any</code>,<code>Never</code>,<code>Void</code>,</li>
 </ol>
 <p>下面按照这三种类型来介绍 TS 的数据类型。</p>
-<h4 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h4><p>基本类型和 JS 完全兼容，只是在 ts 中必须在变量后面加上类型名。</p>
-<ol>
+<h4 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h4><p>基本类型和 JS 完全兼容，只是在 TS 中必须在变量后面加上类型名。</p>
+<ul>
 <li>Boolean：布尔类型，取值 true 或 false</li>
-</ol>
+</ul>
 <figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> isDone: <span class="built_in">boolean</span> = <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>Number：数值类型。js 中所有的数值都用浮点数(float64)表示</li>
-</ol>
+<ul>
+<li>Number：数值。js 中所有的数值都是浮点数，遵循 IEEE754 64 位表示。按照规范 +Infinity，-Infinity 和 NaN 这三个特殊值也包含在内。js 新草案中还定义了<code>bigint</code>类型，用于处理超过 float64 能表示的整数，但平时工作也基本用不到。</li>
+</ul>
 <figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> decimal: <span class="built_in">number</span> = <span class="number">6</span>;</span><br><span class="line"><span class="keyword">let</span> hex: <span class="built_in">number</span> = <span class="number">0xf00d</span>;</span><br><span class="line"><span class="keyword">let</span> binary: <span class="built_in">number</span> = <span class="number">0b1010</span>;</span><br><span class="line"><span class="keyword">let</span> octal: <span class="built_in">number</span> = <span class="number">0o744</span>;</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>String: 字符串类型，属于字面常量。可以用<code></code>来格式化字符串</li>
-</ol>
+<ul>
+<li>String: 字符串，属于字面常量。可以用<code></code>来格式化字符串</li>
+</ul>
 <figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fullName: <span class="built_in">string</span> = <span class="string">`Bob Bobbington`</span>;</span><br><span class="line"><span class="keyword">let</span> age: <span class="built_in">number</span> = <span class="number">37</span>;</span><br><span class="line"><span class="keyword">let</span> sentence: <span class="built_in">string</span> = <span class="string">`Hello, my name is <span class="subst">$&#123;fullName&#125;</span>.</span></span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>Null 与 Undefined: 在 JS 中定义变量时没有初值的话会默认属于<code>undefined</code>类型。在 ts 中，编译的时候启用<code>--strictNullChecks</code>选项，那么这两个类型只能赋值给<code>any</code></li>
-</ol>
+<ul>
+<li>Null 与 Undefined: 在 JS 中定义变量时没有初值的话会默认属于<code>undefined</code>类型。在 TS 中，编译的时候启用<code>--strictNullChecks</code>选项，那么这两个类型只能赋值给<code>any</code></li>
+</ul>
 <figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Not much else we can assign to these variables!</span></span><br><span class="line"><span class="keyword">let</span> u: <span class="literal">undefined</span> = <span class="literal">undefined</span>;</span><br><span class="line"><span class="keyword">let</span> n: <span class="literal">null</span> = <span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>Object：</li>
-</ol>
-
+<ul>
+<li>Object：Object 是 TS/JS 基本类型中唯一属于<code>non-primitive type</code>的。什么意思呢，就是用前面几种类型定义了就是不可变类型（Literal Constants），但 <code>Object</code> 是可变的，比如字典、JSON 对象等数据结构就属于<code>Object</code>类型</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">declare</span> <span class="function"><span class="keyword">function</span> <span class="title">create</span>(<span class="params">o: object | <span class="literal">null</span></span>): <span class="title">void</span></span>;</span><br><span class="line"></span><br><span class="line">create(&#123; prop: <span class="number">0</span> &#125;); <span class="comment">// OK</span></span><br><span class="line">create(<span class="number">42</span>); <span class="comment">// Error</span></span><br></pre></td></tr></table></figure>
+<h4 id="结构体类型"><a href="#结构体类型" class="headerlink" title="结构体类型"></a>结构体类型</h4><p>JS 中只有内置类型，并没有可以用于表达结构的类型。TS 加入了这个语法，相比 JS 表达能力更强。</p>
+<ul>
+<li>Array: 数组。在 JS 中数组是一种类列表对象，在 TS 中这个语义更加清楚。</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> list: <span class="built_in">number</span>[] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]; <span class="comment">// type with []</span></span><br><span class="line"><span class="keyword">let</span> list: <span class="built_in">Array</span>&lt;<span class="built_in">number</span>&gt; = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]; <span class="comment">// generic array type</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Tuple：元组。tuple 本质是一种限制类型的 array，属于 TS 的独有类型。</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Declare a tuple type</span></span><br><span class="line"><span class="keyword">let</span> x: [<span class="built_in">string</span>, <span class="built_in">number</span>];</span><br><span class="line"><span class="comment">// Initialize it</span></span><br><span class="line">x = [<span class="string">"hello"</span>, <span class="number">10</span>]; <span class="comment">// OK</span></span><br><span class="line"><span class="comment">// Initialize it incorrectly</span></span><br><span class="line">x = [<span class="number">10</span>, <span class="string">"hello"</span>]; <span class="comment">// Error</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Enum：枚举。Enum 是 TS 加入的类型，用于表达枚举类型</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ts code</span></span><br><span class="line"><span class="keyword">enum</span> Color &#123;</span><br><span class="line">  Red,</span><br><span class="line">  Green,</span><br><span class="line">  Blue</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> c: Color = Color.Green;</span><br><span class="line"><span class="comment">// It is hard to read when compiled to js code.</span></span><br><span class="line"><span class="keyword">var</span> Color;</span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">Color</span>) </span>&#123;</span><br><span class="line">  Color[(Color[<span class="string">"Red"</span>] = <span class="number">0</span>)] = <span class="string">"Red"</span>;</span><br><span class="line">  Color[(Color[<span class="string">"Green"</span>] = <span class="number">1</span>)] = <span class="string">"Green"</span>;</span><br><span class="line">  Color[(Color[<span class="string">"Blue"</span>] = <span class="number">2</span>)] = <span class="string">"Blue"</span>;</span><br><span class="line">&#125;)(Color || (Color = &#123;&#125;));</span><br><span class="line"><span class="keyword">let</span> c = Color.Green;</span><br></pre></td></tr></table></figure>
+<h4 id="特殊类型"><a href="#特殊类型" class="headerlink" title="特殊类型"></a>特殊类型</h4>
       
     </div>
 
@@ -561,7 +575,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TypeScript-类型"><span class="nav-number">2.</span> <span class="nav-text">TypeScript 类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据类型"><span class="nav-number">2.1.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本类型"><span class="nav-number">2.1.1.</span> <span class="nav-text">基本类型</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TypeScript-类型"><span class="nav-number">2.</span> <span class="nav-text">TypeScript 类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据类型"><span class="nav-number">2.1.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本类型"><span class="nav-number">2.1.1.</span> <span class="nav-text">基本类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结构体类型"><span class="nav-number">2.1.2.</span> <span class="nav-text">结构体类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特殊类型"><span class="nav-number">2.1.3.</span> <span class="nav-text">特殊类型</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
