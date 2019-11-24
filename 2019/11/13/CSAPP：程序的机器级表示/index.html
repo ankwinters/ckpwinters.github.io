@@ -96,18 +96,17 @@
 
 
 
-  <meta name="description" content="Hexo是一个轻量级的博客框架，也支持markdown（当然是有限制的）。">
-<meta name="keywords" content="nodejs">
+  <meta name="description" content="x64 汇编语言通用寄存器寄存器x64 的寄存器与 x86 的兼容，包含 16 个通用寄存器。 规则：  字节级操作可以访问最低的字节 生成小于 8 字节的结果的指令： 生成 1 或 2 字节数字的指令会保持剩下的不变 生成 4 字节的数字会把高位 4 个字节置 0    指令和寻址操作包含操作数(operand)，用于指示取出源数据的值以及放置结果的位置。有如下类型：  立即数 Imm 寄存器">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo博客建站笔记">
-<meta property="og:url" content="https://ckpwinters.github.io/2019/05/26/Hexo博客建站笔记/index.html">
+<meta property="og:title" content="CSAPP：程序的机器级表示">
+<meta property="og:url" content="https://ckpwinters.github.io/2019/11/13/CSAPP：程序的机器级表示/index.html">
 <meta property="og:site_name" content="Ank Winters&#39; IT Blog">
-<meta property="og:description" content="Hexo是一个轻量级的博客框架，也支持markdown（当然是有限制的）。">
+<meta property="og:description" content="x64 汇编语言通用寄存器寄存器x64 的寄存器与 x86 的兼容，包含 16 个通用寄存器。 规则：  字节级操作可以访问最低的字节 生成小于 8 字节的结果的指令： 生成 1 或 2 字节数字的指令会保持剩下的不变 生成 4 字节的数字会把高位 4 个字节置 0    指令和寻址操作包含操作数(operand)，用于指示取出源数据的值以及放置结果的位置。有如下类型：  立即数 Imm 寄存器">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-05-26T09:33:17.169Z">
+<meta property="og:updated_time" content="2019-11-14T15:33:32.273Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo博客建站笔记">
-<meta name="twitter:description" content="Hexo是一个轻量级的博客框架，也支持markdown（当然是有限制的）。">
+<meta name="twitter:title" content="CSAPP：程序的机器级表示">
+<meta name="twitter:description" content="x64 汇编语言通用寄存器寄存器x64 的寄存器与 x86 的兼容，包含 16 个通用寄存器。 规则：  字节级操作可以访问最低的字节 生成小于 8 字节的结果的指令： 生成 1 或 2 字节数字的指令会保持剩下的不变 生成 4 字节的数字会把高位 4 个字节置 0    指令和寻址操作包含操作数(operand)，用于指示取出源数据的值以及放置结果的位置。有如下类型：  立即数 Imm 寄存器">
 
 
 
@@ -115,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="https://ckpwinters.github.io/2019/05/26/Hexo博客建站笔记/">
+  <link rel="canonical" href="https://ckpwinters.github.io/2019/11/13/CSAPP：程序的机器级表示/">
 
 
 
@@ -125,7 +124,7 @@
   };
 </script>
 
-  <title>Hexo博客建站笔记 | Ank Winters' IT Blog</title>
+  <title>CSAPP：程序的机器级表示 | Ank Winters' IT Blog</title>
   
 
 
@@ -290,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ckpwinters.github.io/2019/05/26/Hexo博客建站笔记/">
+    <link itemprop="mainEntityOfPage" href="https://ckpwinters.github.io/2019/11/13/CSAPP：程序的机器级表示/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ank Winters">
@@ -307,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo博客建站笔记
+          <h1 class="post-title" itemprop="name headline">CSAPP：程序的机器级表示
 
               
             
@@ -333,12 +332,24 @@
                 
               
 
-              <time title="Created: 2019-05-26 17:31:24 / Modified: 17:33:17" itemprop="dateCreated datePublished" datetime="2019-05-26T17:31:24+08:00">2019-05-26</time>
+              <time title="Created: 2019-11-13 23:34:17" itemprop="dateCreated datePublished" datetime="2019-11-13T23:34:17+08:00">2019-11-13</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-11-14 23:33:32" itemprop="dateModified" datetime="2019-11-14T23:33:32+08:00">2019-11-14</time>
               
             
           </span>
@@ -372,8 +383,30 @@
       
 
       
-        <p>Hexo是一个轻量级的博客框架，也支持markdown（当然是有限制的）。</p>
-
+        <h2 id="x64-汇编语言"><a href="#x64-汇编语言" class="headerlink" title="x64 汇编语言"></a>x64 汇编语言</h2><h3 id="通用寄存器寄存器"><a href="#通用寄存器寄存器" class="headerlink" title="通用寄存器寄存器"></a>通用寄存器寄存器</h3><p>x64 的寄存器与 x86 的兼容，包含 16 个通用寄存器。</p>
+<p>规则：</p>
+<ol>
+<li>字节级操作可以访问最低的字节</li>
+<li>生成小于 8 字节的结果的指令：<ul>
+<li>生成 1 或 2 字节数字的指令会保持剩下的不变</li>
+<li>生成 4 字节的数字会把高位 4 个字节置 0</li>
+</ul>
+</li>
+</ol>
+<h3 id="指令和寻址"><a href="#指令和寻址" class="headerlink" title="指令和寻址"></a>指令和寻址</h3><p>操作包含操作数(operand)，用于指示取出源数据的值以及放置结果的位置。有如下类型：</p>
+<ul>
+<li>立即数 Imm</li>
+<li>寄存器 R[rn]</li>
+<li>内存引用 M[Imm]</li>
+</ul>
+<p>对应的寻址模式有多种</p>
+<ol>
+<li>立即数寻址，得到的便是常数</li>
+<li>寄存器寻址</li>
+<li>内存寻址：绝对选址、间接选址、变量选址等等</li>
+</ol>
+<p>x64 对操作数有一个限制：传送指令的两个操作数<strong>不能都指向内存</strong>。因此需要首先加载到寄存器，再通过寄存器加载到内存。</p>
+<h4 id="数据传送指令"><a href="#数据传送指令" class="headerlink" title="数据传送指令"></a>数据传送指令</h4>
       
     </div>
 
@@ -394,12 +427,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/nodejs/" rel="tag"># nodejs</a>
-          
-        </div>
-      
 
       
       
@@ -409,14 +436,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/09/26/Rust学习笔记：基础类型/" rel="next" title="Rust学习笔记：基础类型">
+                <i class="fa fa-chevron-left"></i> Rust学习笔记：基础类型
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/05/28/Docker入门-仓库、镜像和容器/" rel="prev" title="Docker入门（一）:容器、镜像和仓库">
-                Docker入门（一）:容器、镜像和仓库 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/24/TypeScript入坑笔记/" rel="prev" title="TypeScript入坑笔记">
+                TypeScript入坑笔记 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -461,8 +492,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -521,6 +561,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#x64-汇编语言"><span class="nav-number">1.</span> <span class="nav-text">x64 汇编语言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通用寄存器寄存器"><span class="nav-number">1.1.</span> <span class="nav-text">通用寄存器寄存器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指令和寻址"><span class="nav-number">1.2.</span> <span class="nav-text">指令和寻址</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据传送指令"><span class="nav-number">1.2.1.</span> <span class="nav-text">数据传送指令</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
